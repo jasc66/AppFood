@@ -32,7 +32,7 @@ h1 {
 }
 
 h2 {
-    font-size: 4.2rem;
+    font-size: 4rem;
 }
 
 h3 {
@@ -364,7 +364,41 @@ img {
 .testimonial:hover .testimonial__autor {
     color: var(--naranja);
 }
+/* Media query para testimonios en pantallas pequeñas */
+@media (max-width: 600px) {
+    .testimonial__texto {
+      padding-left: 2rem; /* Reducir el espacio a la izquierda del texto */
+    }
+  
+    .testimonial__texto::before {
+      width: 2rem; /* Reducir el tamaño del icono */
+      height: 2rem; /* Reducir el tamaño del icono */
+      top: 2.5rem; /* Ajustar la posición vertical del icono */
+      left: 1rem; /* Ajustar la posición horizontal del icono */
+    }
+  
+    .testimonial__autor {
+      font-size: 14px; /* Reducir el tamaño de fuente del autor */
+    }
 
+    .testimonial__texto h2 {
+      font-size: 16px; /* Reducir el tamaño de fuente del título */
+    }
+  }
+/* Estilo base para el testimonial__heading */
+.testimoniales__heading {
+    font-size: 4.5rem; /* Tamaño de fuente base */
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media screen and (max-width: 600px) {
+    /* Ajustar el tamaño del testimonial__heading para pantallas pequeñas */
+    .testimoniales__heading {
+      font-size: 3rem; /* Reducir el tamaño de fuente para pantallas pequeñas */
+    }
+  }
+  
+  
 .card-body {
     display: flex;
     justify-content: center;
