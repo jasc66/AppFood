@@ -209,6 +209,7 @@ img {
         justify-content: space-between;
         align-items: center;
         gap: 2rem;
+        flex-direction: column;
     }
 }
 
@@ -219,7 +220,7 @@ img {
 }
 
 .listado__numero {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0;
     font-weight: 900;
     color: var(--primario);
@@ -228,7 +229,7 @@ img {
 
 @media (min-width: 768px) { 
     .listado__numero {
-        flex-basis: 20rem;
+        flex-basis: 10rem;
         text-align: right;
         font-size: 4rem;
     }
