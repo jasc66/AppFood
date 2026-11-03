@@ -22,7 +22,7 @@
       <div class="header__contenedor">
         <div class="header__barra">
           <div class="header__logo">
-            <img src="img/Logo-1.png" alt="CompraYa" />
+            <img src="img/Logo-1.webp" alt="CompraYa" width="130" height="130" />
           </div>
           <nav class="navegacion" aria-label="Principal">
             <a href="#apuestas" class="navegacion__link">Productos</a>
@@ -34,10 +34,18 @@
 
         <div class="header__grid">
           <div class="header__texto">
+            <p class="header__etiqueta">Tienda en línea</p>
             <h1 class="header__heading">
-              Compra tus productos favoritos con CompraYa
+              Compra tus productos favoritos con <span class="acento">CompraYa</span>
             </h1>
-            <a class="header__boton" href="#carrito">Regístrate Ahora</a>
+            <p class="header__bajada">Variedad de todo el mundo, pagos seguros y ofertas que cambian cada día.</p>
+            <div class="header__acciones">
+              <a class="header__boton" href="#carrito">Regístrate Ahora</a>
+              <a class="header__enlace" href="#ofertas">Ver ofertas <span aria-hidden="true">→</span></a>
+            </div>
+            <ul class="chips" aria-label="Beneficios">
+              <li>Envío rápido</li><li>Pago seguro</li><li>Ofertas diarias</li>
+            </ul>
           </div>
 
           <div class="header__grafico">
@@ -51,23 +59,30 @@
       </div>
     </header>
 
+    <div class="cinta" aria-hidden="true">
+      <div class="cinta__pista">
+        <span>Envío rápido</span><span>Pago seguro</span><span>Ofertas diarias</span><span>Todo en un solo lugar</span>
+        <span>Envío rápido</span><span>Pago seguro</span><span>Ofertas diarias</span><span>Todo en un solo lugar</span>
+      </div>
+    </div>
+
     <main id="apuestas" class="apuestas">
       <h2 class="apuestas__heading">¿Qué ofrecemos?</h2>
       <div class="apuestas__contenedor">
         <div class="apuestas__grid">
           <div class="apuestas__imagen">
-            <img src="img/app_2.svg" alt="Pantalla de pago seguro de la app" />
+            <img src="img/app_2.svg" loading="lazy" alt="Pantalla de pago seguro de la app" />
           </div>
 
           <div class="listado">
-            <div class="listado__elemento">
+            <div class="listado__elemento listado__elemento--num" data-n="01">
               <h3 class="listado__heading">Variedad</h3>
               <p class="listado__texto">
                 Encuentra una amplia gama de productos de todo el mundo.
               </p>
             </div>
 
-            <div class="listado__elemento">
+            <div class="listado__elemento listado__elemento--num" data-n="02">
               <h3 class="listado__heading">Seguridad</h3>
               <p class="listado__texto">
                 Nuestro sistema utiliza tecnología de última generación para
@@ -75,7 +90,7 @@
               </p>
             </div>
 
-            <div class="listado__elemento">
+            <div class="listado__elemento listado__elemento--num" data-n="03">
               <h3 class="listado__heading">Accesibilidad</h3>
               <p class="listado__texto">
                 Accede a nuestra plataforma desde cualquier dispositivo, en
@@ -119,25 +134,25 @@
         <h2 id="cat-h" class="categorias__heading">Categorías</h2>
         <ul class="accordion">
             <li tabindex="0">
-                <img src="img/img1.jpg" alt="" />
+                <img src="img/img1.webp" alt="" width="600" height="800" loading="lazy" decoding="async" />
                 <div class="content">
                     <span><h3>Zapatos</h3><p>Zapatos para todas las ocasiones</p></span>
                 </div>
             </li>
             <li tabindex="0">
-                <img src="img/img2.jpg" alt="" />
+                <img src="img/img2.webp" alt="" width="600" height="800" loading="lazy" decoding="async" />
                 <div class="content">
                     <span><h3>Ropa</h3><p>Ropa de última moda</p></span>
                 </div>
             </li>
             <li tabindex="0">
-                <img src="img/img3.jpg" alt="" />
+                <img src="img/img3.webp" alt="" width="600" height="800" loading="lazy" decoding="async" />
                 <div class="content">
                     <span><h3>Tecnología</h3><p>Los últimos gadgets y dispositivos</p></span>
                 </div>
             </li>
             <li tabindex="0">
-                <img src="img/img4.jpg" alt="" />
+                <img src="img/img4.webp" alt="" width="600" height="800" loading="lazy" decoding="async" />
                 <div class="content">
                     <span><h3>Alimentos</h3><p>Facilitando tu vida en casa</p></span>
                 </div>
@@ -147,7 +162,7 @@
 
     <section class="card-body">
       <div class="card">
-        <img src="img/Alonso_c.png" alt="Alonso Salguero Ceballos" width="280" height="300" loading="lazy" />
+        <img src="img/Alonso_c.webp" alt="Alonso Salguero Ceballos" width="280" height="300" loading="lazy" />
         <div>
           <h2>Alonso Salguero Ceballos</h2>
           <h3>UX Developer - Full Stack Developer</h3>
@@ -181,7 +196,7 @@
                   menor a $999 USD.
                 </p>
               </div>
-              <div class="listado__elemento listado__elemento--2col">
+              <div class="listado__elemento listado__elemento--2col listado__elemento--destacado">
                 <p class="listado__numero">Ofertas</p>
                 <p class="listado__texto">
                   en productos seleccionados si el monto de compra es igual o
@@ -192,7 +207,7 @@
           </div>
           <!--.comisiones__contenido-->
           <div class="comisiones__imagen">
-            <img src="img/app_3.svg" alt="Gráfico de gastos mensuales en la app" />
+            <img src="img/app_3.svg" loading="lazy" alt="Gráfico de gastos mensuales en la app" />
           </div>
         </div>
       </div>
@@ -245,7 +260,7 @@
       <div class="footer__contenedor">
         <div class="footer__grid">
           <div class="footer__logo">
-            <img src="img/Logo-1.png" alt="CompraYa" />
+            <img src="img/Logo-1.webp" alt="CompraYa" width="100" height="100" loading="lazy" />
           </div>
 
           <nav class="navegacion" aria-label="Pie de página">

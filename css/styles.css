@@ -478,3 +478,79 @@ img { max-width: 100%; display: block; }
 .accordion:not(:hover):not(:focus-within) li:first-child .content { opacity: 1; }
 .accordion:not(:hover):not(:focus-within) li:first-child .content span { transform: none; opacity: 1; }
 .accordion:not(:hover):not(:focus-within) { gap: 1.6rem; }
+
+/* ==========================================================================
+   Rediseño v2: hero, cinta, tarjetas numeradas, precios
+   ========================================================================== */
+.header__etiqueta {
+    display: inline-block; margin: 0 0 1rem;
+    padding: .4rem 1.4rem; border-radius: 99px;
+    background: var(--primario-oscuro); color: var(--blanco);
+    font-size: 1.3rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+}
+.header__heading { margin-top: .6rem; }
+.acento {
+    background: linear-gradient(transparent 62%, rgb(248 117 55 / .85) 62% 92%, transparent 92%);
+    padding: 0 .3rem; -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.header__bajada { font-size: 1.9rem; max-width: 44rem; margin: 0 0 3rem; }
+.header__acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem 3rem; margin-bottom: 3rem; }
+.header__acciones .header__boton { margin: 0; }
+.header__enlace { font-weight: 700; color: var(--primario-oscuro); padding: .6rem 0; }
+.header__enlace span { display: inline-block; transition: transform .3s var(--ease); }
+.header__enlace:hover span { transform: translateX(.6rem); }
+.chips { display: flex; flex-wrap: wrap; gap: 1rem; }
+.chips li {
+    padding: .6rem 1.6rem; border-radius: 99px; font-size: 1.4rem; font-weight: 500;
+    background: var(--blanco); border: 1px solid rgb(20 33 61 / .12);
+    box-shadow: 0 6px 16px -10px rgb(20 33 61 / .5);
+}
+.chips li::before { content: '✓'; color: var(--naranja-texto); font-weight: 700; margin-right: .6rem; }
+@media (max-width: 767px) {
+    .header__acciones { flex-direction: column; align-items: stretch; text-align: center; }
+    .header__bajada { text-align: center; margin-inline: auto; }
+    .chips { justify-content: center; }
+    .header__etiqueta { display: table; margin-inline: auto; }
+}
+
+/* Cinta de beneficios (solo transform: barata) */
+.cinta { overflow: hidden; background: var(--primario-oscuro); color: var(--blanco); transform: rotate(-1deg); width: 104%; margin: -1rem -2% 2rem; position: relative; z-index: 2; }
+.cinta__pista { display: flex; width: max-content; animation: cinta 30s linear infinite; }
+.cinta span {
+    font-family: var(--fuenteDisplay); font-weight: 800; font-size: 2rem;
+    text-transform: uppercase; letter-spacing: .06em; padding: 1.4rem 3rem; white-space: nowrap;
+}
+.cinta span::after { content: '✦'; color: var(--naranja); margin-left: 6rem; }
+@keyframes cinta { to { transform: translateX(-50%); } }
+
+/* Tarjetas numeradas */
+.listado__elemento--num { position: relative; overflow: hidden; padding-left: 9rem; }
+.listado__elemento--num::before {
+    content: attr(data-n);
+    position: absolute; left: 2rem; top: 50%; transform: translateY(-50%);
+    font-family: var(--fuenteDisplay); font-weight: 800; font-size: 5.6rem; line-height: 1;
+    color: transparent; -webkit-text-stroke: 2px var(--naranja);
+    transition: color .35s, transform .35s var(--ease);
+}
+.listado__elemento--num:hover::before { color: var(--naranja); transform: translateY(-50%) scale(1.08); }
+@media (max-width: 600px) { .listado__elemento--num { padding-left: 7rem; } .listado__elemento--num::before { font-size: 4rem; } }
+
+/* Precios: la oferta destacada invierte colores */
+.comisiones .listado__elemento--2col { text-align: center; }
+.listado__elemento--destacado { background: var(--primario-oscuro); color: var(--blanco); position: relative; }
+.listado__elemento--destacado .listado__numero { color: var(--naranja); }
+.listado__elemento--destacado::after {
+    content: 'Recomendado'; position: absolute; top: 1.4rem; right: 1.4rem;
+    background: var(--naranja); color: var(--primario-oscuro);
+    font-size: 1.1rem; font-weight: 700; padding: .2rem 1rem; border-radius: 99px; text-transform: uppercase; letter-spacing: .08em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cinta__pista { animation: none; }
+}
+
+/* Ajustes v2 */
+html, body { overflow-x: clip; }
+.listado__elemento--num { padding-left: 11rem; }
+.listado__elemento--num .listado__heading, .listado__elemento--num .listado__texto { text-align: left; }
+@media (max-width: 600px) { .listado__elemento--num { padding-left: 8rem; } }
